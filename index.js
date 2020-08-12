@@ -157,18 +157,17 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(arr){
-    let chocoArray = [];
-    for (let i = 0; i < originalFlavors; i++) {
-        if (originalFlavors[i] === "Chocolate") {
-            chocoArray[i] = originalFlavors[i];
+function filterByWord(arr, string, newArr){
+    newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].includes(string)) {
+            newArr.push(arr[i]);
             
         }
     }
-
+        return newArr;
 };
-
-console.log(filterByWord());
+console.log(filterByWord(originalFlavors, 'Chocolate'));
 
 
 
